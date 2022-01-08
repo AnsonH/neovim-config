@@ -58,7 +58,8 @@ return packer.startup(function(use)
   ----------------- START OF YOUR PLUGINS ----------------
   --------------------------------------------------------
 
-
+  --[[ Syntax highlighting ]]--
+  use "sainnhe/sonokai"
 
   --------------------------------------------------------
   ------------------ END OF YOUR PLUGINS -----------------
