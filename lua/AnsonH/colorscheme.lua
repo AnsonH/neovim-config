@@ -19,10 +19,14 @@ end
 
 -- Customization
 local hi = {
+  -- Base
   "Visual guibg=#49454A",
   "CursorLine guibg=#383539",
   "MatchParen guibg=#5C5A60 guifg=#E5C463",
-  "LineNr guifg=#5C5A60"
+  "LineNr guifg=#5C5A60",
+
+  -- nvim-scrollview (Scroll bar)
+  "ScrollView guibg=#adadad",
 }
 
 for _, v in pairs(hi) do

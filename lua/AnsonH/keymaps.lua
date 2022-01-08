@@ -69,6 +69,9 @@ keymap("i", "jj", "<Esc>", opts)
 keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
+-- Save with <C-s>
+keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)
+
 
 --------------------------------------------------------
 ------------------------ VISUAL ------------------------

@@ -1,6 +1,6 @@
 --[[
   - SCROLL DOWN TO "START OF YOUR PLUGINS" comment block to install plguins.
-  - Plugins will be automatically installed after updating this file
+  - Run :PackerInstall to install plugins
   
   - We use "packer.nvim" as the plugin manager: https://github.com/wbthomason/packer.nvim
     - Example: https://github.com/wbthomason/packer.nvim#quickstart
@@ -55,11 +55,25 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim"  -- Useful lua functions used by lots of plugins
   --------------------------------------------------------
-  ----------------- START OF YOUR PLUGINS ----------------
+  ---------------- START OF YOUR PLUGINS ----------------
   --------------------------------------------------------
 
   --[[ Syntax highlighting ]]--
   use "sainnhe/sonokai"
+
+  --[[ Completion ]]--
+  use "hrsh7th/nvim-cmp"              -- completion engine
+  use "hrsh7th/cmp-buffer"            -- buffer completions (~words in same file)
+  use "hrsh7th/cmp-path"              -- path completions
+  use "hrsh7th/cmp-cmdline"           -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip"      -- snippet completions
+
+  --[[ Snippets ]]--
+  use "L3MON4D3/LuaSnip"              -- snippet engine
+  use "rafamadriz/friendly-snippets"  -- a bunch of snippets to use
+
+  --[[ Aesthetics ]]--
+  use 'dstein64/nvim-scrollview'      -- scroll bar
 
   --------------------------------------------------------
   ------------------ END OF YOUR PLUGINS -----------------
@@ -70,3 +84,5 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
+
+--[[ Check out `plugins-extra-config.lua` for plugin configuration ]]--
