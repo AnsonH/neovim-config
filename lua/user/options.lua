@@ -10,7 +10,7 @@ vim.cmd [[set formatoptions-=cro]]         -- TODO: this doesn't seem to work
 local options = {
   -- Misc
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
-  updatetime = 1000,                        -- faster completion (4000ms default)
+  updatetime = 300,                        -- time for CursorHold command (wait time beofre highlighting current word)
 
   -- GUI
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages

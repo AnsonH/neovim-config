@@ -6,7 +6,6 @@ local g = vim.g
 
 g.sonokai_style = "shusia"     -- ie. `let g:sonokai_style = "shusia"
 g.sonokai_disable_italic_comment = 1
-g.sonokai_transparent_background = 1
 
 
 -- Use protected call
@@ -19,14 +18,15 @@ end
 
 -- Customization
 local hi = {
-  -- Base
-  "Visual guibg=#49454A",
+  -- GUI
+  "Visual guibg=#2A3D40",
   "CursorLine guibg=#383539",
-  "MatchParen guibg=#5C5A60 guifg=#E5C463",
-  "LineNr guifg=#5C5A60",
+  "LineNr guifg=#67676D",
+  "ScrollView guibg=#adadad",   -- nvim-scrollview (scroll bar)
 
-  -- nvim-scrollview (Scroll bar)
-  "ScrollView guibg=#adadad",
+  -- Code
+  "MatchParen guibg=#515155 guifg=#E5C463",
+  "CurrentWord guibg=#515155",  -- Highlight current word
 }
 
 for _, v in pairs(hi) do
