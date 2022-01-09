@@ -1,6 +1,6 @@
 # Neovim Config
 
-Adapted from [Neovim from Scratch](https://www.youtube.com/playlist?list=plhoh5vyxr6qq41nfl4gvhfp-wld5xzizz) playlist.
+Adapted from [LunarVim/Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch). Check out this tutorial playlist: [Neovim from Scratch](https://www.youtube.com/playlist?list=plhoh5vyxr6qq41nfl4gvhfp-wld5xzizz)
 
 ## Installation
 
@@ -37,4 +37,8 @@ If these directories already exist, you can rename them (eg. `nvim` to `nvim.old
 
 2. Open Neovim with `nvim`. It will automatically install plugins
 3. After installing plugins, re-open Neovim.
-4. (TBC: Install LSP?)
+4. Run `:LspInstallInfo` to open LSP (Language Server Protocol) Installer. Move the caret over a line under "Available Servers" to install a server. Some servers you can install are:
+   - `cssls`
+   - `jsonls`
+   - `pyright`
+   - `sumneko_lua`

@@ -18,7 +18,7 @@ lsp_installer.on_server_ready(function(server)
 	}
 
 	--------------------------------------------------------------
-  ------ REGISTER SETTINGS FOR SPECIFIC LANGUAGE SERVERS -------
+  ------ ADDITIONAL SETTINGS FOR SPECIFIC LANGUAGE SERVERS -----
   --------------------------------------------------------------
 
 	-- JSON

@@ -1,3 +1,5 @@
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls
+
 -- Find more schemas here: https://www.schemastore.org/json/
 local schemas = {
   {
