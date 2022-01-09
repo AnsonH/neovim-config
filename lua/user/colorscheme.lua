@@ -19,7 +19,7 @@ end
 -- Customization
 local hi = {
   -- GUI
-  "Visual guibg=#2A3D40",
+  "Visual guibg=#2E4447",
   "CursorLine guibg=#383539",
   "LineNr guifg=#67676D",
   "ScrollView guibg=#adadad",   -- nvim-scrollview (scroll bar)

@@ -102,10 +102,11 @@ cmp.setup({
   },
   -- Order of snippets to show
   sources = {
-    { name = "nvim_lsp" },
-    { name = "luasnip" },
-    { name = "path" },
-    { name = "buffer" },
+    { name = "nvim_lsp" },  -- LSP
+    { name = "luasnip" },   -- Snippets
+    { name = "path" },      -- Path
+    { name = 'nvim_lua' },  -- Neovim Lua API
+    { name = "buffer" },    -- Buffer
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,

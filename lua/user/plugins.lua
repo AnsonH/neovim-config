@@ -61,13 +61,14 @@ return packer.startup(function(use)
   --[[ Syntax highlighting ]]--
   use "sainnhe/sonokai"
 
-  --[[ Completion ]]--
+  --[[ Auto-completion ]]--
   use "hrsh7th/nvim-cmp"              -- completion engine
   use "hrsh7th/cmp-buffer"            -- buffer completions (~words in same file)
   use "hrsh7th/cmp-path"              -- path completions
   use "hrsh7th/cmp-cmdline"           -- cmdline completions
   use "saadparwaiz1/cmp_luasnip"      -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"          -- LSP completions
+  use "hrsh7th/cmp-nvim-lua"          -- Neovim Lua API completions
 
   --[[ Snippets ]]--
   use "L3MON4D3/LuaSnip"              -- snippet engine
