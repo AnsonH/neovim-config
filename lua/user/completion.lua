@@ -2,13 +2,12 @@
   Autocompleting engine: https://github.com/hrsh7th/nvim-cmp
 
   KEYBINDINGS FOR AUTO-COMPLETION:
-   - <Enter>   : Select item
-   - <Tab>     : Cycle through items
-
-   - <C-j> or <Tab>    : Select next menu item
-   - <C-k> or <S-Tab>  : Select previous menu item
-   - <C-e>     : Exit autocomplete menu
-
+   - <Tab>   : Select item
+   - <C-j>   : Go to next menu item
+   - <C-k>   : Go to previous menu item
+   - <C-f>   : Scroll down the preview menu at the right
+   - <C-b>   : Scroll up the preview menu at the right
+   - <C-e>   : Exit autocomplete menu
 ]]--
 
 -- Protected calls for "hrsh7th/nvim-cmp" and "luasnip" plugins
@@ -58,7 +57,8 @@ local kind_icons = {
   TypeParameter = "",
 }
 
-cmp.setup {
+-- Editor area setup
+cmp.setup({
   -- Snippet engine (use luasnip)
   snippet = {
     expand = function(args)
@@ -69,22 +69,18 @@ cmp.setup {
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
-    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }), -- Scroll preview menu at right
-    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-2), { "i", "c" }), -- Scroll preview menu at right
+    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(2), { "i", "c" }),
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),  -- NOT WORKING for some reason
     ["<C-e>"] = cmp.mapping {
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
     },
-    -- Accept currently selected item. If none selected, `select` first item.
-    -- Set `select` to `false` to only confirm explicitly selected items.
-    ["<CR>"] = cmp.mapping.confirm { select = true },
-
-    -- Cycle through items with <Tab> and <S-Tab>
+    -- Accept currently selected item.
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expandable() then
+        cmp.confirm({ select = true })  -- Accept first item if none is selected
+      elseif luasnip.expandable() then  -- Snippet is accepted
         luasnip.expand()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
@@ -93,42 +89,23 @@ cmp.setup {
       else
         fallback()
       end
-    end, {
-      "i",
-      "s",
-    }),
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, {
-      "i",
-      "s",
-    }),
+    end, { "i", "s" }),
   },
+
   -- Formatting of menu item
   formatting = {
-    fields = { "kind", "abbr", "menu" },
+    fields = { "kind", "abbr" },  -- Display icon first, then the abbreviation
     format = function(entry, vim_item)
-      -- Kind icons
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-      vim_item.menu = ({
-        luasnip = "[Snippet]",
-        buffer = "[Buffer]",
-        path = "[Path]",
-      })[entry.source.name]
       return vim_item
     end,
   },
   -- Order of snippets to show
   sources = {
+    { name = "nvim_lsp" },
     { name = "luasnip" },
-    { name = "buffer" },
     { name = "path" },
+    { name = "buffer" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
@@ -138,7 +115,15 @@ cmp.setup {
     border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
   },
   experimental = {
-    ghost_text = false,   -- Inline preview of autocomplete text
+    ghost_text = true,   -- Inline preview of autocomplete text
     native_menu = false,
   },
-}
+})
+
+-- `:` cmdline setup
+cmp.setup.cmdline(':', {
+  sources = {
+    { name = "cmdline" },
+    { name = "path" },
+  },
+})
