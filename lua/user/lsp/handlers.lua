@@ -1,20 +1,21 @@
 --[[
 
   KEYBINDINGS FOR LSP: (See `lsp_keymaps()`)
-   - gh    - Hover (show tooltip)
-   - gl    - Show diagnostics (error/warning/info message)
-   - [d    - Go to previous diagnostic message
-   - ]d    - Go to next diagnostic message
-   - gfd   - Show full list of diagnostics (gfd ~= go full diagnostic)
-     - Press <Enter> to jump to location of diagnostic
+   - gh    : Hover (show tooltip)
+   - gl    : Show diagnostics (error/warning/info message)
+   - [d    : Go to previous diagnostic message
+   - ]d    : Go to next diagnostic message
 
-   - gd    - Go to definition
-   - gD    - Go to declaration
-   - gr    - Find references
+   - gd    : Go to definition
+   - gD    : Go to declaration
 
-   - F2    - Rename
-   - <C-k> - Signature help (?)
-   - Shift + Alt + F  /  :Format   - Format document
+   - F2    : Rename
+   - <C-k> : Signature help
+   - Shift + Alt + F  /  :Format   : Format document
+  
+   The following keymaps are handled by Telescope (telescope.lua):
+   - gwd   : Show workspace diagnostics
+   - gr    : Go to references
 
 ]]--
 
@@ -92,7 +93,6 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)

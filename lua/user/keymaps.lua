@@ -1,5 +1,4 @@
 local opts = { noremap = true, silent = true }
-
 local term_opts = { silent = true }
 
 -- Shorten function name
@@ -57,6 +56,12 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Action without yanking
 keymap("n", "<leader>dd", '"_dd', opts)
 keymap("n", "<leader>cw", '"_cw', opts)
+
+-- Show name of highlight group under cursor in the command line area
+keymap("n", "<C-I>", ':echo "hi: ".synIDattr(synID(line("."),col("."),1),"name")<CR>', opts)
+
+-- Misc
+keymap("n", "<Esc>", "<Nop>", opts)   -- Disable left indentation with <Esc>
 
 
 --------------------------------------------------------

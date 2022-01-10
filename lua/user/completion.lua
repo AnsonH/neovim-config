@@ -5,10 +5,17 @@
    - <Tab>   : Select item
    - <C-j>   : Go to next menu item
    - <C-k>   : Go to previous menu item
-   - <C-f>   : Scroll down the preview menu at the right
-   - <C-b>   : Scroll up the preview menu at the right
+   - <C-u>   : Scroll up the preview menu at the right ("u" = up)
+   - <C-d>   : Scroll down the preview menu at the right ("d" = down)
    - <C-e>   : Exit autocomplete menu
 ]]--
+
+-- LSP Installer keybindings
+local opts = { noremap = true, silent = true }
+local keymap = vim.api.nvim_set_keymap
+
+keymap("n", "<leader>l", ":LspInstallInfo<CR>", opts)   -- Open LSP Installer window
+
 
 -- Protected calls for "hrsh7th/nvim-cmp" and "luasnip" plugins
 local cmp_status_ok, cmp = pcall(require, "cmp")
@@ -69,8 +76,8 @@ cmp.setup({
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
-    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-2), { "i", "c" }), -- Scroll preview menu at right
-    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(2), { "i", "c" }),
+    ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-2), { "i", "c" }), -- Scroll up preview menu
+    ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(2), { "i", "c" }),  -- Scroll down preview menu
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),  -- NOT WORKING for some reason
     ["<C-e>"] = cmp.mapping {
       i = cmp.mapping.abort(),
