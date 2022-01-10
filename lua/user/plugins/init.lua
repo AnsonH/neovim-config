@@ -9,6 +9,9 @@
       - Linux: ~/.local/share/nvim/site/pack/packer/start
 ]]--
 
+-- See ./extra-config.lua for extra plugin configurations
+require("user.plugins.extra-config")
+
 local fn = vim.fn
 
 -- Automatically install packer
@@ -78,8 +81,11 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"         -- enable LSP
   use "williamboman/nvim-lsp-installer"    -- simple to use language server installer
 
+  --[[ Telescope ]]--
+  use "nvim-telescope/telescope.nvim" -- Core plugin
+
   --[[ Aesthetics ]]--
-  use 'dstein64/nvim-scrollview'      -- scroll bar
+  use "dstein64/nvim-scrollview"      -- scroll bar
 
   --------------------------------------------------------
   ------------------ END OF YOUR PLUGINS -----------------
