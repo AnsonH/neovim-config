@@ -61,7 +61,7 @@ keymap("n", "<leader>cw", '"_cw', opts)
 keymap("n", "<C-I>", ':echo "hi: ".synIDattr(synID(line("."),col("."),1),"name")<CR>', opts)
 
 -- Misc
-keymap("n", "<Esc>", "<Nop>", opts)   -- Disable left indentation with <Esc>
+keymap("n", "<Esc>", ":noh<CR>", opts)   -- Clear search highlight
 
 
 --------------------------------------------------------

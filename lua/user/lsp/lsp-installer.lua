@@ -15,6 +15,10 @@ lsp_installer.on_server_ready(function(server)
 	local opts = {
 		on_attach = require("user.lsp.handlers").on_attach,
 		capabilities = require("user.lsp.handlers").capabilities,
+
+		-- Run in single file mode if "root directory" is not specified
+		-- See ":h lspconfig-single-file-support"
+		single_file_support = true,
 	}
 
 	--------------------------------------------------------------
