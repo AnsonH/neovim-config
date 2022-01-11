@@ -90,6 +90,10 @@ return packer.startup(function(use)
   use "p00f/nvim-ts-rainbow"          -- rainbow brackets
   use 'nvim-treesitter/playground'    -- view Tresitter information
 
+  --[[ Productivity ]]--
+  use "windwp/nvim-autopairs"         -- autopairs, integrates with both cmp and treesitter
+  use "windwp/nvim-ts-autotag"        -- auto tags for HTML/JSX/PHP...
+
   --[[ Aesthetics ]]--
   use "dstein64/nvim-scrollview"      -- scroll bar
 

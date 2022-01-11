@@ -15,6 +15,12 @@ configs.setup {
     enable = true,
     disable = { "yaml" }
   },
+  autopairs = {                -- https://github.com/windwp/nvim-autopairs
+		enable = true,
+	},
+  autotag = {                  -- https://github.com/windwp/nvim-ts-autotag
+    enable = true,
+  },
 
   --[[ `nvim-ts-rainbow` plugin (Rainbow brackets) ]]--
   rainbow = {

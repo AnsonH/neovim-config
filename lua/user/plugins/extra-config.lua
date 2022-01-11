@@ -1,4 +1,4 @@
---[[ Extra configurations for plugins ]]--
+--[[ Extra configurations for minor plugins ]]--
 
 local g = vim.g
 
