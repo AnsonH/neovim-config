@@ -77,7 +77,7 @@ telescope.setup {
   defaults = {
     prompt_prefix = " ",
     selection_caret = " ",
-    path_display = { "shorten" },   -- See ":h telescope.defaults.path_display"
+    path_display = { "smart" },   -- See ":h telescope.defaults.path_display"
 
     -- More on Lua Regex: https://www.lua.org/manual/5.1/manual.html#5.4.1
     file_ignore_patterns = { "%a.lock" },

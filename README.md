@@ -2,7 +2,7 @@
 
 Adapted from [LunarVim/Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch). Check out this tutorial playlist: [Neovim from Scratch](https://www.youtube.com/playlist?list=plhoh5vyxr6qq41nfl4gvhfp-wld5xzizz)
 
-## Installation
+## Installation (WIP)
 
 ### Prerequisites
 

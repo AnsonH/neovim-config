@@ -61,8 +61,9 @@ return packer.startup(function(use)
   ---------------- START OF YOUR PLUGINS -----------------
   --------------------------------------------------------
 
-  --[[ Syntax highlighting ]]--
+  --[[ Syntax highlighting & Colors ]]--
   use "sainnhe/sonokai"
+  use "norcalli/nvim-colorizer.lua"   -- color highlighter
 
   --[[ Auto-completion ]]--
   use "hrsh7th/nvim-cmp"              -- completion engine
@@ -82,7 +83,12 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer"    -- simple to use language server installer
 
   --[[ Telescope ]]--
-  use "nvim-telescope/telescope.nvim" -- Core plugin
+  use "nvim-telescope/telescope.nvim" -- core plugin
+
+  --[[ Treesitter ]]--
+  use "nvim-treesitter/nvim-treesitter"
+  use "p00f/nvim-ts-rainbow"          -- rainbow brackets
+  use 'nvim-treesitter/playground'    -- view Tresitter information
 
   --[[ Aesthetics ]]--
   use "dstein64/nvim-scrollview"      -- scroll bar
