@@ -31,14 +31,15 @@ end
 -- Customization
 local hi = {
   -- GUI
-  "Visual guibg=#365154",
   "CursorLine guibg=#383539",
+  "DiffChange guibg=#5d433b",
   "LineNr guifg=#67676D",
-  "ScrollView guibg=#adadad",     -- nvim-scrollview (scroll bar)
+  "ScrollView guibg=#adadad",         -- nvim-scrollview (scroll bar)
+  "Visual guibg=#365154",
 
   -- Code: General
+  "CurrentWord guibg=#515155",        -- Highlight current word
   "MatchParen guibg=#515155",
-  "CurrentWord guibg=#515155",    -- Highlight current word
 
   -- Code: Language Specific
   "javaScriptNull guifg=#ab9df2",
@@ -47,9 +48,13 @@ local hi = {
   "TSConstant guifg=#ab9df2",
   "TSConstructor guifg=#7accd7",
   "TSParameter guifg=#ef9062",
-  "TSText guifg=#e3e1e4",         -- HTML tag inner text
-  "TSTag guifg=#f85e84",          -- HTML tag name
-  "TSTagAttribute guifg=#7accd7", -- HTML tag attribute
+  "TSText guifg=#e3e1e4",             -- HTML tag inner text
+  "TSTag guifg=#f85e84",              -- HTML tag name
+  "TSTagAttribute guifg=#7accd7",     -- HTML tag attribute
+
+  -- Git
+  "GitSignsChange guifg=#ef9062",
+  "GitSignsChangeNr guifg=#ef9062",
 }
 
 for _, v in pairs(hi) do

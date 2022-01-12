@@ -96,6 +96,9 @@ return packer.startup(function(use)
   use "windwp/nvim-ts-autotag"        -- auto tags for HTML/JSX/PHP...
   use "numToStr/Comment.nvim"         -- easily comment code
 
+  --[[ Git ]]--
+  use "lewis6991/gitsigns.nvim"       -- git signs
+
   --[[ Aesthetics ]]--
   use "dstein64/nvim-scrollview"      -- scroll bar
 
