@@ -25,8 +25,10 @@ vim.g.maplocalleader = " "
 keymap("n", "<C-s>", ":w<cr>", opts)
 keymap("n", "<C-a>", "ggVG", opts)
 keymap("n", "<C-z>", "u", opts)
-keymap("n", "<C-[>", "<<", opts)
-keymap("n", "<C-]>", ">>", opts)
+
+-- Indentation
+keymap("n", "<", "<<", opts)
+keymap("n", ">", ">>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)

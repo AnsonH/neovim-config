@@ -9,8 +9,8 @@
       - Linux: ~/.local/share/nvim/site/pack/packer/start
 ]]--
 
--- See ./extra-config.lua for extra plugin configurations
 require("user.plugins.extra-config")
+require("user.plugins.vim-plug")
 
 local fn = vim.fn
 
@@ -93,6 +93,7 @@ return packer.startup(function(use)
   --[[ Productivity ]]--
   use "windwp/nvim-autopairs"         -- autopairs, integrates with both cmp and treesitter
   use "windwp/nvim-ts-autotag"        -- auto tags for HTML/JSX/PHP...
+  use "tpope/vim-surround"            -- quickly manipulate surrounds (brackets, quotes, etc.)
 
   --[[ Aesthetics ]]--
   use "dstein64/nvim-scrollview"      -- scroll bar

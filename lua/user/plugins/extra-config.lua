@@ -9,6 +9,7 @@ if not status_ok then
 end
 
 colorizer.setup{
+  "*",    -- Highlight all files, but customize some others.
   lua = { names = false },
 }
 
