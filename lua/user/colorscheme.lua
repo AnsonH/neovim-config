@@ -46,6 +46,7 @@ local hi = {
   -- Code: Treesitter
   "TSConstant guifg=#ab9df2",
   "TSConstructor guifg=#7accd7",
+  "TSParameter guifg=#ef9062",
   "TSText guifg=#e3e1e4",         -- HTML tag inner text
   "TSTag guifg=#f85e84",          -- HTML tag name
   "TSTagAttribute guifg=#7accd7", -- HTML tag attribute

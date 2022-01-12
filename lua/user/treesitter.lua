@@ -21,6 +21,10 @@ configs.setup {
   autotag = {                  -- https://github.com/windwp/nvim-ts-autotag
     enable = true,
   },
+  context_commentstring = {    -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring
+    enable = true,
+    enable_autocmd = false,
+  },
 
   --[[ `nvim-ts-rainbow` plugin (Rainbow brackets) ]]--
   rainbow = {

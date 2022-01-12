@@ -89,11 +89,12 @@ return packer.startup(function(use)
   use "nvim-treesitter/nvim-treesitter"
   use "p00f/nvim-ts-rainbow"          -- rainbow brackets
   use 'nvim-treesitter/playground'    -- view Tresitter information
+  use 'JoosepAlviste/nvim-ts-context-commentstring'     -- comments for embedded languages
 
   --[[ Productivity ]]--
   use "windwp/nvim-autopairs"         -- autopairs, integrates with both cmp and treesitter
   use "windwp/nvim-ts-autotag"        -- auto tags for HTML/JSX/PHP...
-  use "tpope/vim-surround"            -- quickly manipulate surrounds (brackets, quotes, etc.)
+  use "numToStr/Comment.nvim"         -- easily comment code
 
   --[[ Aesthetics ]]--
   use "dstein64/nvim-scrollview"      -- scroll bar
