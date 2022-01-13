@@ -54,9 +54,10 @@ packer.init {
 }
 
 return packer.startup(function(use)
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim"  -- Useful lua functions used by lots of plugins
+  use "wbthomason/packer.nvim"        -- Have packer manage itself
+  use "nvim-lua/popup.nvim"           -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim"         -- Useful lua functions used by lots of plugins
+  use 'kyazdani42/nvim-web-devicons'  -- For plugins to add file icons
   --------------------------------------------------------
   ---------------- START OF YOUR PLUGINS -----------------
   --------------------------------------------------------
@@ -95,6 +96,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs"         -- autopairs, integrates with both cmp and treesitter
   use "windwp/nvim-ts-autotag"        -- auto tags for HTML/JSX/PHP...
   use "numToStr/Comment.nvim"         -- easily comment code
+  use 'kyazdani42/nvim-tree.lua'      -- file explorer
 
   --[[ Git ]]--
   use "lewis6991/gitsigns.nvim"       -- git signs

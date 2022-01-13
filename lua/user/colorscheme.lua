@@ -1,13 +1,10 @@
 --[[
   Sonokai - Shusia variant palette:
    - Foreground: #e3e1e4
-   - Background: #2d2a2e
-   - Red:    #f85e84
-   - Orange: #ef9062
-   - Yellow: #e5c463
-   - Green:  #9ecd6f
-   - Blue:   #7accd7
-   - Purple: #ab9df2
+   - Background: #2d2a2e ; #37343a ; #3b383e ; #423f46 ; #49464e
+   - Rainbow:    #f85e84 ; #ef9062 ; #e5c463 ; #9ecd6f ; #7accd7 ; #ab9df2
+   - Color BG:   #55393d ; #394634 ; #4e432f ; #394634 ; #354157
+   - Shade:      #848089 ; #605d68 ; #1a181a
 ]]--
 
 local colorscheme = "sonokai"  -- https://github.com/sainnhe/sonokai
@@ -31,10 +28,10 @@ end
 -- Customization
 local hi = {
   -- GUI
-  "CursorLine guibg=#383539",
+  "CursorLine guibg=#3b383e",
   "DiffChange guibg=#5d433b",
   "LineNr guifg=#67676D",
-  "ScrollView guibg=#adadad",         -- nvim-scrollview (scroll bar)
+  "ScrollView guibg=#67676D",         -- nvim-scrollview (scroll bar)
   "Visual guibg=#365154",
 
   -- Code: General
@@ -55,6 +52,11 @@ local hi = {
   -- Git
   "GitSignsChange guifg=#ef9062",
   "GitSignsChangeNr guifg=#ef9062",
+
+  -- nvim-tree (File explorer)
+  "NvimTreeFolderName guifg=#7accd7",
+  "NvimTreeEmptyFolderName guifg=#7accd7",
+  "NvimTreeOpenedFolderName guifg=#7accd7",
 }
 
 for _, v in pairs(hi) do

@@ -43,7 +43,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<C-q>", "<C-w>q", opts)  -- Close window
 
 -- Open file explorer at the left
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
