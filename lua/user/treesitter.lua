@@ -75,6 +75,7 @@ configs.setup {
     "glsl",
     "gdscript",
     "gdresource",
+    "godot_resource",
     "hcl",
     "julia",
     "ocaml",
