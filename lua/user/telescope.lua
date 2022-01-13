@@ -111,7 +111,7 @@ telescope.setup {
         ["<C-d>"] = actions.preview_scrolling_down,       -- Preview window scroll down ("d" = down)
         ["<PageUp>"] = actions.results_scrolling_up,      -- Result window scroll up
         ["<PageDown>"] = actions.results_scrolling_down,  -- Result window scroll down
- 
+
         ["<A-h>"] = actions.select_horizontal,            -- Open selected item in new horizontal split window
         ["<A-v>"] = actions.select_vertical,              -- Open selected item in new vertical split window
         ["<A-t>"] = actions.select_tab,                   -- Open selected item in new tab

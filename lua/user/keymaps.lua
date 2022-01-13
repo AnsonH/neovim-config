@@ -22,7 +22,7 @@ vim.g.maplocalleader = " "
 --------------------------------------------------------
 
 -- Mimic VS Code
-keymap("n", "<C-s>", ":w<cr>", opts)
+keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("n", "<C-a>", "ggVG", opts)
 keymap("n", "<C-z>", "u", opts)
 
@@ -34,13 +34,24 @@ keymap("n", ">", ">>", opts)
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
--- Better window navigation
--- eg. "Ctrl+h" instead of "Ctrl+w h" to switch to left window
+-- Windows
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-keymap("n", "<C-q>", "<C-w>q", opts)  -- Close window
+keymap("n", "<C-q>", "<C-w>q", opts)            -- Close window
+
+-- Buffers
+keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)    -- Next buffer
+keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)    -- Previous buffer
+keymap("n", "<S-Left>", ":BufferLineMovePrev<CR>", opts)  -- Move buffer left in buffer line
+keymap("n", "<S-Right>", ":BufferLineMoveNext<CR>", opts) -- Move buffer right in buffer line
+keymap("n", "Q", ":Bdelete<CR>", opts)          -- Close buffer
+
+-- Tabs
+keymap("n", "<A-l>", ":tabnext<CR>", opts)      -- Next tab
+keymap("n", "<A-h>", ":tabprevious<CR>", opts)  -- Previous tab
+keymap("n", "<A-q>", ":tabclose<CR>", opts)     -- Close tab
 
 -- Open file explorer at the left
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
@@ -50,10 +61,6 @@ keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
-
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Action without yanking
 keymap("n", "<leader>dd", '"_dd', opts)
