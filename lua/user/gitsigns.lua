@@ -22,11 +22,10 @@ gitsigns.setup {
   word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
 
   keymaps = {
-    -- Default keymap options
     noremap = true,
 
-    ['n ]c'] = { expr = true, "&diff ? ']c' : ':Gitsigns next_hunk<CR>'"},
-    ['n [c'] = { expr = true, "&diff ? '[c' : ':Gitsigns prev_hunk<CR>'"},
+    ['n ]h'] = { expr = true, "&diff ? ']h' : ':Gitsigns next_hunk<CR>'"},
+    ['n [h'] = { expr = true, "&diff ? '[h' : ':Gitsigns prev_hunk<CR>'"},
 
     ['n <leader>hs'] = ':Gitsigns stage_hunk<CR>',
     ['v <leader>hs'] = ':Gitsigns stage_hunk<CR>',

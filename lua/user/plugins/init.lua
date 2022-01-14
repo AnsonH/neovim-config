@@ -105,7 +105,8 @@ return packer.startup(function(use)
 
   --[[ Aesthetics ]]--
   use "dstein64/nvim-scrollview"      -- scroll bar
-  use "akinsho/bufferline.nvim"       -- buffer line
+  use "akinsho/bufferline.nvim"       -- buffer line at the top
+  use 'nvim-lualine/lualine.nvim'     -- status line at the bottom
 
   --------------------------------------------------------
   ------------------ END OF YOUR PLUGINS -----------------

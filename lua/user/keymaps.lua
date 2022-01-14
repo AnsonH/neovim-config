@@ -25,6 +25,7 @@ vim.g.maplocalleader = " "
 keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("n", "<C-a>", "ggVG", opts)
 keymap("n", "<C-z>", "u", opts)
+keymap("n", "<A-z>", ":set wrap!<CR>", opts)    -- Toggle word wrap
 
 -- Indentation
 keymap("n", "<", "<<", opts)

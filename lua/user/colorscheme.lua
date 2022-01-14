@@ -1,10 +1,10 @@
 --[[
   Sonokai - Shusia variant palette:
-   - Foreground: #e3e1e4
-   - Background: #2d2a2e ; #37343a ; #3b383e ; #423f46 ; #49464e
+   - fg:         #e3e1e4
+   - bg0 ~ bg4:  #2d2a2e ; #37343a ; #3b383e ; #423f46 ; #49464e
    - Rainbow:    #f85e84 ; #ef9062 ; #e5c463 ; #9ecd6f ; #7accd7 ; #ab9df2
-   - Color BG:   #55393d ; #394634 ; #4e432f ; #394634 ; #354157
-   - Shade:      #848089 ; #605d68 ; #1a181a
+   - Color BG:   #55393d ; #5d433b ; #4e432f ; #394634 ; #354157 ; #443f56
+   - grey, grey_dim, black: #848089 ; #605d68 ; #1a181a
 ]]--
 
 local colorscheme = "sonokai"  -- https://github.com/sainnhe/sonokai
@@ -31,7 +31,7 @@ local hi = {
   "CursorLine guibg=#3b383e",
   "DiffChange guibg=#5d433b",
   "LineNr guifg=#67676D",
-  "ScrollView guibg=#67676D",         -- nvim-scrollview (scroll bar)
+  "ScrollView guibg=#67676D",         -- Scroll bar
   "Visual guibg=#365154",
 
   -- Code: General
