@@ -12,6 +12,7 @@ vim.call('plug#begin')
 
 --[[ Productivity ]]--
 Plug "tpope/vim-surround"            -- quickly manipulate surrounds (brackets, quotes, etc.)
+Plug "sbdchd/neoformat"              -- Formatter support
 
 --------------------------------------------------------
 ------------------ END OF YOUR PLUGINS -----------------

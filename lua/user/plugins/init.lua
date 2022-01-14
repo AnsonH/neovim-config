@@ -83,6 +83,7 @@ return packer.startup(function(use)
   --[[ LSP (Language Server Protocol) ]]--
   use "neovim/nvim-lspconfig"         -- enable LSP
   use "williamboman/nvim-lsp-installer"    -- simple to use language server installer
+  use "jose-elias-alvarez/null-ls.nvim"    -- for formatters and linters
 
   --[[ Telescope ]]--
   use "nvim-telescope/telescope.nvim" -- core plugin
@@ -90,14 +91,14 @@ return packer.startup(function(use)
   --[[ Treesitter ]]--
   use "nvim-treesitter/nvim-treesitter"
   use "p00f/nvim-ts-rainbow"          -- rainbow brackets
-  use 'nvim-treesitter/playground'    -- view Tresitter information
-  use 'JoosepAlviste/nvim-ts-context-commentstring'     -- comments for embedded languages
+  use "nvim-treesitter/playground"    -- view Tresitter information
+  use "JoosepAlviste/nvim-ts-context-commentstring"     -- comments for embedded languages
 
   --[[ Productivity ]]--
   use "windwp/nvim-autopairs"         -- autopairs, integrates with both cmp and treesitter
   use "windwp/nvim-ts-autotag"        -- auto tags for HTML/JSX/PHP...
   use "numToStr/Comment.nvim"         -- easily comment code
-  use 'kyazdani42/nvim-tree.lua'      -- file explorer
+  use "kyazdani42/nvim-tree.lua"      -- file explorer
 
   --[[ Git ]]--
   use "lewis6991/gitsigns.nvim"       -- git signs

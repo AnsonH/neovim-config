@@ -10,3 +10,4 @@ end
 
 require("user.lsp.lsp-installer") 		-- ./lsp-installer.lua
 require("user.lsp.handlers").setup()	-- ./handlers.lua
+require("user.lsp.null-ls")						-- ./null-ls.lua
