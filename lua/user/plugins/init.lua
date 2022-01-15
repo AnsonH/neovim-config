@@ -99,6 +99,7 @@ return packer.startup(function(use)
   use "windwp/nvim-ts-autotag"        -- auto tags for HTML/JSX/PHP...
   use "numToStr/Comment.nvim"         -- easily comment code
   use "kyazdani42/nvim-tree.lua"      -- file explorer
+  use "akinsho/toggleterm.nvim"       -- toggle terminal window
 
   --[[ Git ]]--
   use "lewis6991/gitsigns.nvim"       -- git signs

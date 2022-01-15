@@ -11,7 +11,7 @@ local actions = require "telescope.actions"
 ------------[[ END OF TELESCOPE EXTENSIONS ]]--------------
 
 --[[ Custom Telescope themes ]]--
-telescope_expanded_dropdown = function(height)
+_G.telescope_expanded_dropdown = function(height)
   local menu_height = height or 20
 
   return {
