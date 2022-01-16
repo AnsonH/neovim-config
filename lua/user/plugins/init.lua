@@ -59,6 +59,8 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"         -- Useful lua functions used by lots of plugins
   use 'kyazdani42/nvim-web-devicons'  -- For plugins to add file icons
   use "moll/vim-bbye"                 -- delete buffers without closing the window
+  use "lewis6991/impatient.nvim"      -- improve startup time
+
   --------------------------------------------------------
   ---------------- START OF YOUR PLUGINS -----------------
   --------------------------------------------------------
