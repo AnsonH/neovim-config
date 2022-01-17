@@ -30,12 +30,13 @@ local hi = {
   -- GUI
   "CursorLine guibg=#3b383e",
   "DiffChange guibg=#5d433b",
+  "IndentBlanklineChar guifg=#423f46",  -- indentation guide
   "LineNr guifg=#67676D",
-  "ScrollView guibg=#67676D",         -- Scroll bar
+  "ScrollView guibg=#67676D",           -- Scroll bar
   "Visual guibg=#365154",
 
   -- Code: General
-  "CurrentWord guibg=#515155",        -- Highlight current word
+  "CurrentWord guibg=#515155",          -- Highlight current word
   "MatchParen guibg=#515155",
 
   -- Code: Language Specific
@@ -45,9 +46,9 @@ local hi = {
   "TSConstant guifg=#ab9df2",
   "TSConstructor guifg=#7accd7",
   "TSParameter guifg=#ef9062",
-  "TSText guifg=#e3e1e4",             -- HTML tag inner text
-  "TSTag guifg=#f85e84",              -- HTML tag name
-  "TSTagAttribute guifg=#7accd7",     -- HTML tag attribute
+  "TSText guifg=#e3e1e4",               -- HTML tag inner text
+  "TSTag guifg=#f85e84",                -- HTML tag name
+  "TSTagAttribute guifg=#7accd7",       -- HTML tag attribute
 
   -- Git
   "GitSignsChange guifg=#ef9062",

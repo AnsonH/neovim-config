@@ -110,6 +110,7 @@ return packer.startup(function(use)
   use "dstein64/nvim-scrollview"      -- scroll bar
   use "akinsho/bufferline.nvim"       -- buffer line at the top
   use 'nvim-lualine/lualine.nvim'     -- status line at the bottom
+  use "lukas-reineke/indent-blankline.nvim"             -- indentation lines
 
   --------------------------------------------------------
   ------------------ END OF YOUR PLUGINS -----------------

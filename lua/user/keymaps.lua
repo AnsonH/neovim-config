@@ -55,7 +55,7 @@ keymap("n", "<A-h>", ":tabprevious<CR>", opts)  -- Previous tab
 keymap("n", "<A-q>", ":tabclose<CR>", opts)     -- Close tab
 
 -- Open file explorer at the left
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR> :IndentBlanklineEnable<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
