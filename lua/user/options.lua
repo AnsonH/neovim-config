@@ -23,7 +23,7 @@ local options = {
   termguicolors = true,                    -- set term gui colors (most terminals support this)
   completeopt = { "menuone", "noselect" }, -- completion pop-up menu
   pumheight = 10,                          -- pop up menu height
-  
+
   -- Line display
   scrolloff = 8,                           -- Min. no. of lines to keep above and below cursor
   sidescrolloff = 8,                       -- Min. no. of colums to scroll horizontally
@@ -35,7 +35,7 @@ local options = {
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
   swapfile = false,                        -- dont' create swapfile
   undofile = true,                         -- enable persistent undo
-  
+
   -- Line number
   number = true,                           -- set numbered lines
   relativenumber = true,                   -- set relative numbered lines
