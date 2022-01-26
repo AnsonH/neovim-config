@@ -91,7 +91,13 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim" -- core plugin
 
   --[[ Treesitter ]]--
-  use "nvim-treesitter/nvim-treesitter"
+  use {
+    "nvim-treesitter/nvim-treesitter",
+
+    -- Fixes a temporary issue
+    -- https://github.com/nvim-treesitter/nvim-treesitter/issues/2295#issuecomment-1015952587
+    commit = '668de0951a36ef17016074f1120b6aacbe6c4515',
+  }
   use "p00f/nvim-ts-rainbow"          -- rainbow brackets
   use "nvim-treesitter/playground"    -- view Tresitter information
   use "JoosepAlviste/nvim-ts-context-commentstring"     -- comments for embedded languages
