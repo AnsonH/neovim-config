@@ -64,6 +64,7 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Action without yanking
+keymap("n", "x", '"_x', opts)            -- Delete letter without yanking
 keymap("n", "<leader>dd", '"_dd', opts)
 keymap("n", "<leader>cw", '"_cw', opts)
 
