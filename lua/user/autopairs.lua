@@ -1,6 +1,4 @@
---[[
-  Plugin homepage: https://github.com/windwp/nvim-autopairs
-]]--
+--[[ Plugin homepage: https://github.com/windwp/nvim-autopairs ]]--
 
 local status_ok, npairs = pcall(require, "nvim-autopairs")
 if not status_ok then
@@ -15,7 +13,7 @@ npairs.setup {
     javascript = { "string", "template_string" },
   },
 
-  -- Run ":echo &ft" to get file type
+  -- Note: Run ":echo &ft" to get file type
   disable_filetype = { "TelescopePrompt", "spectre_panel" },
 
   -- https://github.com/windwp/nvim-autopairs#fastwrap
@@ -31,6 +29,18 @@ npairs.setup {
     highlight_grey = "LineNr",
   },
 }
+
+
+-- Custom rules (Examples: https://github.com/windwp/nvim-autopairs/wiki/Custom-rules)
+local Rule = require'nvim-autopairs.rule'
+
+npairs.add_rules {
+  -- Javascript: Auto-complete `/**` with `*/`
+  Rule('/%*%*$', ' */', { 'typescript', 'typescriptreact', 'javascript', 'javascriptreact' })
+    :use_regex(true)
+    :set_end_pair_length(3),
+}
+
 
 -- Integration with cmp (autocomplete)
 local cmp_autopairs = require "nvim-autopairs.completion.cmp"
