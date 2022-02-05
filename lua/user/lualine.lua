@@ -35,7 +35,7 @@ local branch = {
 -- Row and col
 local location = {
 	"location",
-	padding = 0,
+	padding = 1,
 }
 
 local filename = {

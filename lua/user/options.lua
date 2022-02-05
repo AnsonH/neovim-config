@@ -3,9 +3,9 @@ vim.cmd [[autocmd InsertEnter * :set norelativenumber]]
 vim.cmd [[autocmd InsertLeave * :set relativenumber]]
 
 vim.cmd [[set guifont=FiraCode\ NF:h14.5]] -- Font for Neovide GUI
-vim.cmd "set whichwrap+=<,>,[,],h,l"
+vim.cmd [[set whichwrap+=<,>,[,],h,l]]
 vim.cmd [[set iskeyword+=-]]               -- Treat words with `-` as single word (eg. Press `dw` on `foo-bar` deletes entire word)
-vim.cmd [[set formatoptions-=cro]]         -- TODO: this doesn't seem to work
+vim.cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]   -- Disable auto comments on new line
 
 local options = {
   -- Misc
