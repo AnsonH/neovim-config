@@ -22,6 +22,7 @@ require "user/nvim-tree"
 require "user/toggleterm"
 
 -- Aesthetics
+require "user/alpha"
 require "user/bufferline"
 require "user/indentline"
 require "user/lualine"
