@@ -1,6 +1,7 @@
---[[
-    PLUGIN HOMEPAGE: https://github.com/kyazdani42/nvim-tree.lua
-]]--
+--[[ PLUGIN HOMEPAGE: https://github.com/kyazdani42/nvim-tree.lua ]]--
+
+vim.g.nvim_tree_respect_buf_cwd = 1  -- change nvim-tree's cwd to that of new buffer's when opening nvim-tree
+vim.g.nvim_tree_git_hl = 1           -- highlight file/folder in Git
 
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 vim.g.nvim_tree_icons = {
@@ -48,6 +49,13 @@ nvim_tree.setup {
     }
   },
 
+  update_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+    ignore_list = {},
+  },
+
   disable_netrw = true,
   hijack_netrw = true,
   open_on_setup = false,
@@ -59,7 +67,6 @@ nvim_tree.setup {
   auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
-  update_cwd = true,
   update_to_buf_dir = {
     enable = true,
     auto_open = true,
@@ -72,11 +79,6 @@ nvim_tree.setup {
       warning = "",
       error = "",
     },
-  },
-  update_focused_file = {
-    enable = true,
-    update_cwd = true,
-    ignore_list = {},
   },
   git = {
     enable = true,

@@ -60,6 +60,7 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons'  -- For plugins to add file icons
   use "moll/vim-bbye"                 -- delete buffers without closing the window
   use "lewis6991/impatient.nvim"      -- improve startup time
+  use "ahmedkhalf/project.nvim"       -- project management
 
   --------------------------------------------------------
   ---------------- START OF YOUR PLUGINS -----------------
@@ -91,7 +92,11 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim" -- core plugin
 
   --[[ Treesitter ]]--
-  use "nvim-treesitter/nvim-treesitter"
+  use {
+    -- https://github.com/nvim-treesitter/nvim-treesitter/issues/2295#issuecomment-1015952587
+    'nvim-treesitter/nvim-treesitter',
+    commit = '668de0951a36ef17016074f1120b6aacbe6c4515',
+  }
   use "p00f/nvim-ts-rainbow"          -- rainbow brackets
   use "nvim-treesitter/playground"    -- view Tresitter information
   use "JoosepAlviste/nvim-ts-context-commentstring"     -- comments for embedded languages

@@ -11,6 +11,7 @@ require "user/completion"
 require "user/gitsigns"
 require "user/impatient"
 require "user/lsp"
+require "user/project"
 require "user/telescope"
 require "user/treesitter"
 

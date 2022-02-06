@@ -1,4 +1,4 @@
---[[ 
+--[[
 	Run :LspInstallInfo to open nvim-lsp-installer. Press `i` to install a server
 ]]--
 
