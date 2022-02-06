@@ -8,10 +8,10 @@ if not status_ok then
   return
 end
 
-colorizer.setup{
+colorizer.setup({
   "*",    -- Highlight all files, but customize some others.
   lua = { names = false },
-}
+}, { names = false })
 
 -- sbdchd/neoformat
 g.neoformat_try_node_exe = 1          -- attempt to find exe in a node_modules/.bin

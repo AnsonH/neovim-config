@@ -5,10 +5,17 @@ if not status_ok then
 	return
 end
 
+local function shell()
+  if vim.fn.has('macunix') == 1 then
+    return vim.o.shell
+  else
+		-- Windows have problems when setting `vim.o.shell` to Powershell
+    return "pwsh -NoLogo"
+  end
+end
+
 toggleterm.setup({
-	--[[ NOTE: If you are Linux user, switch to use `shell = vim.o.shell` ]]--
-	shell = "pwsh -NoLogo",			-- Windows
-	-- shell = vim.o.shell,			-- MacOS / Linux
+	shell = shell(),
 
 	open_mapping = [[<c-\>]],		-- Hotkey to open Terminal
 
