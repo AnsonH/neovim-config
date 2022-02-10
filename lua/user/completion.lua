@@ -10,13 +10,6 @@
    - <C-e>   : Exit autocomplete menu
 ]]--
 
--- LSP Installer keybindings
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
-
-keymap("n", "<leader>l", ":LspInstallInfo<CR>", opts)   -- Open LSP Installer window
-
-
 -- Protected calls for "hrsh7th/nvim-cmp" and "luasnip" plugins
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then

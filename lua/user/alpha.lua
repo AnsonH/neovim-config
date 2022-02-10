@@ -40,7 +40,7 @@ local function footer()
   local date = os.date(" %Y-%m-%d")
   local version = vim.version()
   local nvim_version_info = " " .. version.major .. "." .. version.minor .. "." .. version.patch
-  local github = " AnsonH"
+  local github = " AnsonH/neovim-config"
 
   return date .. "   " .. nvim_version_info .. "   " .. github
 end

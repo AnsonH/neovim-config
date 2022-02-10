@@ -10,13 +10,14 @@ vim.cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]   -- Disable auto comments on ne
 local options = {
   -- Misc
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
+  timeoutlen = 400,                        -- time in ms for a mapped sequence to complete
   updatetime = 300,                        -- time for CursorHold command (wait time beofre highlighting current word)
 
   -- GUI
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
   cursorline = true,                       -- highlight the current line
   mouse = "a",                             -- enable mouse control
-  showmode = false,                        -- hide '-- INSERT --' in status line
+  showmode = false,                        -- hide Insert, Replace, or Visual mode at status line
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   splitbelow = true,                       -- force all horizontal splits to go below current window
   splitright = true,                       -- force all vertical splits to go to the right of current window

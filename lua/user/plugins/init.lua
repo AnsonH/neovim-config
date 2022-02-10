@@ -108,6 +108,7 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim"         -- easily comment code
   use "kyazdani42/nvim-tree.lua"      -- file explorer
   use "akinsho/toggleterm.nvim"       -- toggle terminal window
+  use "folke/which-key.nvim"          -- keybinding hint
 
   --[[ Git ]]--
   use "lewis6991/gitsigns.nvim"       -- git signs

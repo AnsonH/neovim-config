@@ -52,22 +52,10 @@ keymap(
   ":lua require'telescope.builtin'.live_grep(telescope_expanded_dropdown())<CR>",
   opts
 )
--- keymap(
---   "n",
---   "gfd",    -- File diagnostics
---   ":lua require'telescope.builtin'.diagnostics({ bufnr=0 , unpack(telescope_expanded_dropdown()) })<CR>",  -- For Lua 5.2, `unpack()` becomes `table.unpack()`
---   opts
--- )
 keymap(
   "n",
   "gwd",    -- Workspace diagnostics
   ":lua require'telescope.builtin'.diagnostics(telescope_expanded_dropdown())<CR>",
-  opts
-)
-keymap(
-  "n",
-  "gr",    -- Show LSP references
-  ":lua require'telescope.builtin'.lsp_references(telescope_expanded_dropdown(16))<CR>",
   opts
 )
 

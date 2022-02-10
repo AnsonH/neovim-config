@@ -54,9 +54,6 @@ keymap("n", "<A-l>", ":tabnext<CR>", opts)      -- Next tab
 keymap("n", "<A-h>", ":tabprevious<CR>", opts)  -- Previous tab
 keymap("n", "<A-q>", ":tabclose<CR>", opts)     -- Close tab
 
--- Open file explorer at the left
-keymap("n", "<leader>e", ":NvimTreeToggle<CR> :IndentBlanklineEnable<CR>", opts)
-
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -86,7 +83,7 @@ keymap("i", "jj", "<Esc>", opts)
 keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
--- Save with <C-s>
+-- Save file
 keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)
 
 
