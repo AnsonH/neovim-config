@@ -1,6 +1,7 @@
 --[[ Base ]]--
 require "user/options"
 require "user/keymaps"
+require "user/autocommands"
 
 --[[ Plugins ]]--
 require "user/plugins"
