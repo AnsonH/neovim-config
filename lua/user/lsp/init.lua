@@ -9,5 +9,8 @@ end
 
 require("user.lsp.lsp-installer")
 require("user.lsp.handlers").setup()
+
+-- Other LSP plugins
+require("user.lsp.lsp-signature")
 require("user.lsp.null-ls")
 require("user.lsp.nvim-lightbulb")
