@@ -58,14 +58,16 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim"           -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim"         -- Useful lua functions used by lots of plugins
   use 'kyazdani42/nvim-web-devicons'  -- For plugins to add file icons
-  use "moll/vim-bbye"                 -- delete buffers without closing the window
-  use "lewis6991/impatient.nvim"      -- improve startup time
-  use "ahmedkhalf/project.nvim"       -- project management
-  use "antoinemadec/FixCursorHold.nvim"     -- fix lsp doc highlight
 
   --------------------------------------------------------
   ---------------- START OF YOUR PLUGINS -----------------
   --------------------------------------------------------
+
+  --[[ General ]]--
+  use "moll/vim-bbye"                 -- delete buffers without closing the window
+  use "lewis6991/impatient.nvim"      -- improve startup time
+  use "ahmedkhalf/project.nvim"       -- project management
+  use "antoinemadec/FixCursorHold.nvim"     -- fix lsp doc highlight
 
   --[[ Syntax highlighting & Colors ]]--
   use "sainnhe/sonokai"
@@ -88,6 +90,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"         -- enable LSP
   use "williamboman/nvim-lsp-installer"    -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim"    -- for formatters and linters
+  use "kosayoda/nvim-lightbulb"            -- show lightbulb for code actions
 
   --[[ Telescope ]]--
   use "nvim-telescope/telescope.nvim" -- core plugin

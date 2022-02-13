@@ -37,7 +37,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap(
   "n",
   "<C-p>",    -- Find files
-  ":lua require'telescope.builtin'.find_files(require'telescope.themes'.get_dropdown{ previewer=false })<CR>",
+  ":lua require'telescope.builtin'.find_files(require'telescope.themes'.get_dropdown{previewer=false})<CR>",
   opts
 )
 keymap(

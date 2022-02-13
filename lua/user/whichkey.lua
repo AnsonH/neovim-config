@@ -113,7 +113,10 @@ local n_leader_mappings = {
 
   l = {
     name = " LSP",
-    a = { ":lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+    a = {
+      ":lua require'telescope.builtin'.lsp_code_actions(require'telescope.themes'.get_dropdown())<CR>",
+      "Code Action"
+    },
     l = { ":lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 
     d = {
