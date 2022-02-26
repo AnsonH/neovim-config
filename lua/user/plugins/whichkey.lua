@@ -119,14 +119,8 @@ local n_leader_mappings = {
     },
     l = { ":lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 
-    d = {
-      ":lua vim.diagnostic.setloclist()<CR>",
-      "Document Diagnostics",
-    },
-    w = {
-      ":lua require'telescope.builtin'.diagnostics(telescope_expanded_dropdown())<CR>",
-      "Workspace Diagnostics",
-    },
+    d = { ":Trouble document_diagnostics<CR>", "Document Diagnostics" },
+    w = { ":Trouble workspace_diagnostics<CR>", "Workspace Diagnostics" },
 
     -- LSP Installer
     i = { ":LspInfo<cr>", "Info" },

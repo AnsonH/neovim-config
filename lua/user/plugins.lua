@@ -92,6 +92,7 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim"    -- for formatters and linters
   use "kosayoda/nvim-lightbulb"            -- show lightbulb for code actions
   use "ray-x/lsp_signature.nvim"           -- LSP signature hint as you type
+  use "folke/trouble.nvim"                 -- pretty diagnostics list
 
   --[[ Telescope ]]--
   use "nvim-telescope/telescope.nvim" -- core plugin
