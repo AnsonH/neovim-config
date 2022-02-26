@@ -52,5 +52,14 @@ dashboard.section.header.opts.hl = "Red"
 dashboard.section.buttons.opts.hl = "Red"   -- Not working for some reason
 dashboard.section.footer.opts.hl = "Green"
 
-dashboard.opts.opts.noautocmd = true
+-- Custom layout for extra padding
+dashboard.config.layout = {
+  { type = "padding", val = 3 },
+  dashboard.section.header,
+  { type = "padding", val = 2 },
+  dashboard.section.buttons,
+  { type = "padding", val = 1 },
+  dashboard.section.footer,
+}
+
 alpha.setup(dashboard.opts)
