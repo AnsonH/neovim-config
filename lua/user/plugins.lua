@@ -71,7 +71,7 @@ return packer.startup(function(use)
 
   --[[ Syntax highlighting & Colors ]]--
   use "sainnhe/sonokai"
-  use "norcalli/nvim-colorizer.lua"   -- color highlighter
+  use "br1anchen/nvim-colorizer.lua"   -- color highlighter
 
   --[[ Auto-completion ]]--
   use "hrsh7th/nvim-cmp"              -- completion engine
