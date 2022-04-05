@@ -6,11 +6,11 @@ if not status_ok then
 end
 
 local function shell()
-  if vim.fn.has('macunix') == 1 then
-    return vim.o.shell
-  else
-		-- Windows have problems when setting `vim.o.shell` to Powershell
+  if vim.loop.os_uname().sysname == "Windows_NT" then
+    -- Windows have problems when setting `vim.o.shell` to Powershell
     return "pwsh -NoLogo"
+  else
+    return vim.o.shell
   end
 end
 

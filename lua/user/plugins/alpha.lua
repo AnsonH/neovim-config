@@ -15,10 +15,10 @@ local logo = {
 }
 
 local function open_config()
-  if vim.fn.has('macunix') == 1 then
-    return ":e ~/.config/nvim/init.lua <CR>"
-  else
+  if vim.loop.os_uname().sysname == "Windows_NT" then
     return ":e ~/AppData/Local/nvim/init.lua <CR>"
+  else
+    return ":e ~/.config/nvim/init.lua <CR>"
   end
 end
 
