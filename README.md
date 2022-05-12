@@ -13,7 +13,7 @@ My [Neovim](https://neovim.io/) configuration written in Lua.
 
 ## Installation
 
-> ⚠️ Requires Neovim v0.6.0 or greater
+> ⚠️ Requires Neovim v0.7.0 or greater
 
 [This Notion site](https://ansonheung.notion.site/Installation-Set-Up-874a2a362e4c4d688b345d9f0070e5d2) documents the instructions to set-up this configuration.
 
