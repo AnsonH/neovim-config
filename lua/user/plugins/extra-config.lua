@@ -18,5 +18,5 @@ g.neoformat_try_node_exe = 1          -- attempt to find exe in a node_modules/.
 g.neoformat_only_msg_on_error = 1
 
 -- Neovide GUI https://github.com/neovide/neovide/wiki/Configuration
-g.neovide_cursor_animation_length = 0.06
+g.neovide_cursor_animation_length = 0
 g.neovide_refresh_rate = 60
