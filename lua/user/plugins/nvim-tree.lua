@@ -1,32 +1,5 @@
 --[[ PLUGIN HOMEPAGE: https://github.com/kyazdani42/nvim-tree.lua ]]--
 
-vim.g.nvim_tree_respect_buf_cwd = 1  -- change nvim-tree's cwd to that of new buffer's when opening nvim-tree
-vim.g.nvim_tree_git_hl = 1           -- highlight file/folder in Git
-
--- each of these are documented in `:help nvim-tree.OPTION_NAME`
-vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    untracked = "U",
-    deleted = "",
-    ignored = "◌",
-  },
-  folder = {
-    arrow_open = "",
-    arrow_closed = "",
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-}
-
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
   return
@@ -40,6 +13,8 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
+  respect_buf_cwd = true,    -- change nvim-tree's cwd to that of new buffer's when opening nvim-tree
+
   -- Ignore files (Press `I` in menu to toggle ignore file visibility)
   filters = {
     dotfiles = false,        -- Don't show files starting with `.`
@@ -54,6 +29,41 @@ nvim_tree.setup {
     enable = true,
     update_cwd = true,
     ignore_list = {},
+  },
+
+  renderer = {
+    highlight_git = true,
+    root_folder_modifier = ":t",
+    icons = {
+      show = {
+        git = true,
+        folder = true,
+        file = true,
+        folder_arrow = true,
+      },
+      glyphs = {
+        default = "",
+        symlink = "",
+        git = {
+          unstaged = "",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "U",
+          deleted = "",
+          ignored = "◌",
+        },
+        folder = {
+          arrow_open = "",
+          arrow_closed = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+        },
+      }
+    },
   },
 
   disable_netrw = true,
@@ -84,6 +94,14 @@ nvim_tree.setup {
     ignore = true,  -- Ignore files based on .gitignore
     timeout = 500,
   },
+  actions = {
+    open_file = {
+      quit_on_open = false,
+      window_picker = {
+        enable = false,
+      },
+    },
+  },
   view = {
     width = 30,
     height = 30,
@@ -102,16 +120,5 @@ nvim_tree.setup {
     },
     number = false,
     relativenumber = false,
-  },
-  quit_on_open = 0,
-  git_hl = 1,
-  disable_window_picker = 0,
-  root_folder_modifier = ":t",
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
   },
 }
