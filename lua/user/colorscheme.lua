@@ -55,9 +55,9 @@ local hi = {
   "GitSignsChangeNr guifg=#ef9062",
 
   -- nvim-tree (File explorer)
-  "NvimTreeFolderName guifg=#7accd7",
-  "NvimTreeEmptyFolderName guifg=#7accd7",
-  "NvimTreeOpenedFolderName guifg=#7accd7",
+  "NvimTreeFolderName guifg=#ffffff",
+  "NvimTreeEmptyFolderName guifg=#ffffff",
+  "NvimTreeOpenedFolderName guifg=#ffffff",
 }
 
 for _, v in pairs(hi) do
