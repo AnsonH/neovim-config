@@ -141,6 +141,7 @@ local n_g_opts = {
   prefix = "g",
 }
 
+-- Commands start with "g"
 local n_g_mappings = {
   -- LSP
   d = { ":lua vim.lsp.buf.definition()<CR>", " Go to Definition" },
@@ -151,9 +152,10 @@ local n_g_mappings = {
     " Open Diagnostics"
   },
   r = {
-    ":lua require'telescope.builtin'.lsp_references(telescope_expanded_dropdown(16))<CR>",
+    ":lua require'telescope.builtin'.lsp_references()<CR>",
     " Show References"
   },
+  t = { ":lua vim.lsp.buf.type_definition()<CR>", " Go to Type Definition" },
 
   -- Misc
   f = "Go to File",
